@@ -1,5 +1,5 @@
-import './NavBar.css'
-import carritoIcon from '../../assets/icons/carrito-ico.svg';
+import './NavBar.css';
+import CartWidget from '../CartWidget/CartWidget';
 
 function NavBar () {
     return(
@@ -11,7 +11,7 @@ function NavBar () {
                 <li>Stories</li>
                 <li>Lookbook</li>
             </ul>
-            <img src={carritoIcon} alt="icono carrito de compras" height="36" width="36" className="carrito-ico"/>
+            <CartWidget /> 
         </nav> 
     );
 }
