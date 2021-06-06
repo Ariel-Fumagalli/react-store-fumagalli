@@ -10,4 +10,3 @@ const ItemListContainer = ({greeting}) => {
 }
 
 export default ItemListContainer;
-// prueba

@@ -11,4 +11,3 @@ const CartWidget = () => {
 
 export default CartWidget;
 
-// prueba
