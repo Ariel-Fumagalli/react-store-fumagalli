@@ -1,0 +1,24 @@
+.itemCard{
+    width: calc(100% / 4);
+    background-color: #fff;
+    margin: 12px;
+    border: 1px solid #ccc;
+    img{
+        width: 100%;
+        height: auto;
+    }
+    .product-name{
+        font-size: 18px;
+        font-weight: 700;
+        margin: 20px;      
+    }
+    .product-description{
+        font-size: 16px;
+        font-weight: 400;
+        margin: 0 20px 40px 20px; 
+    }
+    .product-price{
+        font-weight: 700;
+        margin: 20px; 
+    }
+}
