@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,gBAAgB,AAAA,CACZ,KAAK,CAAE,IAAI,CACX,OAAO,CAAE,MAAM,CACf,OAAO,CAAE,IAAI,CACb,cAAc,CAAE,IAAI,CACvB",
+    "mappings": "AAAA,AAAA,gBAAgB,AAAA,CACZ,KAAK,CAAE,IAAI,CACX,OAAO,CAAE,MAAM,CACf,OAAO,CAAE,IAAI,CACb,cAAc,CAAE,KAAK,CACxB",
     "sources": [
         "ItemList.scss"
     ],

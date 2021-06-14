@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './ItemListContainer.css';
 import ItemCount from '../ItemCount/ItemCount';
 import ItemList from '../ItemList/ItemList';
+import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer';
 
 const ItemListContainer = ({ greeting, poductos }) => {
 
@@ -39,6 +40,7 @@ const ItemListContainer = ({ greeting, poductos }) => {
             <h2 style={{fontSize: '30vw', color:"rgb(170, 170, 170)"}}>{greeting}</h2>
             <ItemCount stock={7} initial={1} onAdd={onAdd} /> 
             <ItemList items={items} /> 
+            <ItemDetailContainer />             
         </div>        
     );
 }

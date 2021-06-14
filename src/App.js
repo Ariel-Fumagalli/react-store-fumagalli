@@ -1,7 +1,7 @@
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import ImgDemo from './assets/images/producto_demo.jpg';
+import ImgDemo from './assets/images/sillon_herbie_1.png';
 
 // lista de productos 
 const productList = [
