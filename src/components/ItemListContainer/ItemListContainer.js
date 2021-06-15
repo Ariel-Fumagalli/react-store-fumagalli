@@ -1,30 +1,27 @@
 import React, { useState, useEffect } from 'react';
 import './ItemListContainer.css';
-import ItemCount from '../ItemCount/ItemCount';
 import ItemList from '../ItemList/ItemList';
 import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer';
-
-const ItemListContainer = ({ greeting, poductos }) => {
-
-
-    // Función de mensaje al añadir al carrito
-    const onAdd = (amount) =>{
-        let unidades = 'unidades'
-        if(amount < 2){
-            unidades = 'unidad'
-        }
-        alert(`Agregaste ${amount} ${unidades} al carrito`);  
-    }
+import ImgDemo from '../../assets/images/sillon_herbie_1.png';
+import ImgDemo2 from '../../assets/images/sillon_de_sala_zoe.jpg';
 
 
-    // llamar listado de productos
+const ItemListContainer = ({ greeting }) => {
+
     const [items, setItems] = useState([]);
 
     useEffect(() =>{ 
 
+        const productList = [
+            { id: 1, title: 'Sillón Herbie', description: 'Descripción de prueba 1', pictureUrl:ImgDemo, price: 1500, stock: 20 },
+            { id: 2, title: 'Sillón Zoe', description: 'Descripción de prueba 2', pictureUrl:ImgDemo2, price: 1500, stock: 10 },
+            { id: 3, title: 'Sillón Herbie', description: 'Descripción de prueba 3', pictureUrl:ImgDemo, price: 1500, stock: 30 },
+            { id: 4, title: 'Sillón Zoe', description: 'Descripción de prueba 4', pictureUrl:ImgDemo2, price: 1500, stock: 7 }
+          ];
+
         const call = new Promise((resolve, reject) => {
             setTimeout(() => {
-                resolve(poductos);
+                resolve(productList);
             }, 2000);
         });
         
@@ -32,13 +29,12 @@ const ItemListContainer = ({ greeting, poductos }) => {
             setItems(data)
         });
 
-    }, [poductos]);
+    }, []);
 
 
     return(
         <div className="ItemListContainer">
-            <h2 style={{fontSize: '30vw', color:"rgb(170, 170, 170)"}}>{greeting}</h2>
-            <ItemCount stock={7} initial={1} onAdd={onAdd} /> 
+            <h2>{greeting}</h2>
             <ItemList items={items} /> 
             <ItemDetailContainer />             
         </div>        

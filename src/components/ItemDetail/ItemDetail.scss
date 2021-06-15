@@ -1,13 +1,13 @@
 .item-detail-card{
     width: 100%;
-    height: calc(100vh - 95px);
+    height: 100vh;
     display: grid;
     grid-template-areas: 'item-detail-img item-detail-description';
     grid-template-columns: 40% 60%;
 
     .item-detail-img{
         grid-area: item-detail-img;   
-        padding: 0 64px;
+        padding: 95px 64px 0 64px;
         display: flex;
         align-items: center;
         position: relative;
@@ -30,43 +30,60 @@
         >div{
             width: 100%;
             //background-color: aquamarine;
-            padding: 0 6vw 0 16vw;
+            padding: 95px 6vw 0 16vw;
             h2{
                 color: rgb(22, 22, 22);
-                font-size: 6vw;
+                font-size: 5vw;
                 font-weight: 400;
                 line-height: 98%;
-            }
-            h3{
-                padding-left: 10px;
                 margin-bottom: 60px;
             }
+            /* h3{
+                padding-left: 10px;
+                margin-bottom: 60px;
+            } */
             h4{
                 max-width: 700px;
-                font-size: 20px;
+                font-size: calc(14px + (30 - 14) * ((100vw - 800px) / (3840 - 800)));
                 font-weight: 400;
                 line-height: 134%;
                 color: #646464;
-                margin-bottom: 60px;
+                margin-bottom: 80px;
                 padding-left: 10px;
             }
             ul{
                 list-style: none;
+                width: calc(50vw - 22vw);
                 padding: 0 0 0 10px;
-                margin-bottom: 60px;
+                margin-bottom: 80px;
                 li{
                     margin-bottom: 12px;
                     padding-bottom: 14px;
                     border-bottom: 1px solid #ccc;
+                    color: #646464;
+                    &:first-of-type{
+                        padding-top: 14px;
+                        border-top: 1px solid #ccc;                        
+                    }
+                    strong{
+                        color: #161616;
+                    }
                 }
             }
-            .product-price{
-                font-size: 26px;
-                font-weight: 900;                
-                color: rgb(22, 22, 22);
-                padding-left: 10px;
+
+            .item-price-and-count{
+                width: calc(50vw - 22vw);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                p{
+                    font-size: 32px;
+                    font-weight: 900;                
+                    color: rgb(22, 22, 22);
+                    padding-left: 10px;
+                }
             }
+
         }
     }
-
 }

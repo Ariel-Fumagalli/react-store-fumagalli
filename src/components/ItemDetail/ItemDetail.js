@@ -4,7 +4,7 @@ import ItemCount from '../ItemCount/ItemCount';
 
     const ItemDetail = ({dataItem}) => {
 
-            // Función de mensaje al añadir al carrito
+    // Función de mensaje al añadir al carrito
     const onAdd = (amount) =>{
         let unidades = 'unidades'
         if(amount < 2){
@@ -26,19 +26,21 @@ import ItemCount from '../ItemCount/ItemCount';
                         <div className="item-detail-description">
                             <div>
                                 <h2>{e.title}</h2>
-                                <h3>{e.categoria}</h3>
                                 <h4>{e.description}</h4>
 
                                 <ul>
-                                    <li>Material: {e.material}</li>
-                                    <li>Terminación: {e.terminacion}</li>
-                                    <li>Tapizado: {e.tapizado}</li>
-                                    <li>Medidas: {e.medidas}</li>
-                                    <li>Entrega: {e.entrega}</li>
+                                    <li><strong>Material</strong> - {e.material}</li>
+                                    <li><strong>Terminación</strong> - {e.terminacion}</li>
+                                    <li><strong>Tapizado</strong> - {e.tapizado}</li>
+                                    <li><strong>Medidas</strong> - {e.medidas}</li>
+                                    <li><strong>Entrega</strong> - {e.entrega}</li>
                                 </ul>
 
-                                <p className="product-price">${e.price}</p>                            
-                                <ItemCount stock={7} initial={1} onAdd={onAdd} />
+                                <div className="item-price-and-count">
+                                    <p>${e.price}</p>                            
+                                    <ItemCount stock={7} initial={1} onAdd={onAdd} />
+                                </div>
+
                             </div>
                         </div>                       
 

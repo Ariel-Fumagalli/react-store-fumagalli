@@ -15,14 +15,14 @@ const ItemCount = ({ stock, initial, onAdd }) => {
     }
 
     return(
-        <div className="cont-count-add">
+        <>
             <div className="cont-itemCount">
                 <i className="counterButton remove-ico" onClick={removeItem}></i>
                 <span className="counterAmount">{items}</span>
                 <i className="counterButton add-ico" onClick={addItem}></i>
             </div>
             <button className="btn-addCart" onClick={ () =>onAdd(items) }>agregar al carrito</button>
-        </div>        
+        </>        
     );
 }
 
