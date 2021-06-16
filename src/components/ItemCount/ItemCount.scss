@@ -37,8 +37,9 @@
     .btn-addCart{
         background-color: transparent;
         color: inherit;
-        border: 2px solid rgb(173, 241, 14);
-        padding: 14px 25px;
+        //border: 2px solid rgb(173, 241, 14);
+        border: none;
+        padding: 12px 25px 14px 25px;
         cursor: pointer;
         outline: inherit;
         font-weight: 500;
@@ -48,12 +49,13 @@
         display: block;
         transition: all 0.2s ease;
         &:hover{
-            background-color: rgb(173, 241, 14);
+            //background-color: rgb(173, 241, 14);         
             transition: all 0.2s ease;
         }
         &:active{
             background-color: rgb(92, 128, 8);
-            border: 2px solid rgb(92, 128, 8);
+            //border: 2px solid rgb(92, 128, 8);
+            filter: brightness(90%);
             transform: scale(0.96);
         }
     }

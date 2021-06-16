@@ -38,7 +38,7 @@ import ItemCount from '../ItemCount/ItemCount';
 
                                 <div className="item-price-and-count">
                                     <p>${e.price}</p>                            
-                                    <ItemCount stock={7} initial={1} onAdd={onAdd} />
+                                    <ItemCount stock={7} initial={1} onAdd={onAdd} bg={e.bg_color} />
                                 </div>
 
                             </div>
@@ -52,6 +52,3 @@ import ItemCount from '../ItemCount/ItemCount';
     }
     
     export default ItemDetail;
-    
-
-       

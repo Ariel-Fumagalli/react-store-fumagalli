@@ -13,21 +13,28 @@ nav{
         color: rgb(14, 14, 14);
         font-size: 30px;
         line-height: 144%;
-        font-weight: 900;        
+        font-weight: 900;
+        text-decoration: none;        
     }
     .carrito-ico{
         width: 36px;
         height: 36px; 
     }
-    ul{
+    .selector-categorias{
         display: flex;
         align-items: center; 
         padding: 0;
-        li{
-            list-style-type: none;                       
-            padding: 6px 28px 0 28px;
+        a, p{                   
+            margin: 6px 28px 0 28px;
+            padding: 0 2px;        
             font-size: 16px;            
             font-weight: 500;
+            color: #3e3e3e;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            &.active{
+                border-bottom: 2px solid #3e3e3e;
+            }
         }
     }
 }
