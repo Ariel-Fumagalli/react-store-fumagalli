@@ -27,4 +27,4 @@ Actualmente el proyecto cuenta con:
 
 ### Demo navegación
 
-![Alt Text](https://github.com/Ariel-Fumagalli/react-store-fumagalli/tree/master/src/assets/images/test.gif)
+![Alt Text](https://media.giphy.com/media/fWuBy0KEMPc44MPMFq/giphy.gif)
