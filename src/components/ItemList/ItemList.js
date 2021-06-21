@@ -9,7 +9,7 @@ import Item from '../Item/Item';
             <div className="items-container">                
                 {items.map((e, i) => {
                     return (                    
-                        <Item id={e.id} picture={e.pictureUrl} title={e.title} description={e.description} price={e.price} key={i}/> 
+                        <Item id={e.id} picture={e.pictureUrl} title={e.title} price={e.price} bgColor={e.bg_color} key={i}/> 
                     );
                 })}
             </div>        

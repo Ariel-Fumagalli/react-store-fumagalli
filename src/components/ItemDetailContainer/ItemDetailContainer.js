@@ -2,9 +2,11 @@ import React, { useState, useEffect } from 'react';
 import './ItemDetailContainer.css';
 import ItemDetail from '../ItemDetail/ItemDetail';
 import ImgDemo from '../../assets/images/sillon_herbie_1.png';
-import ImgDemo2 from '../../assets/images/sillon_de_sala_zoe.jpg';
-import ImgDemo3 from '../../assets/images/silla_berlioz.jpg';
-import ImgDemo4 from '../../assets/images/silla_alaska.jpg';
+import ImgDemo2 from '../../assets/images/sillon_de_sala_zoe.png';
+import ImgDemo3 from '../../assets/images/silla_berlioz.png';
+import ImgDemo4 from '../../assets/images/silla_alaska.png';
+import ImgDemo5 from '../../assets/images/sofa_chester.png';
+import ImgDemo6 from '../../assets/images/sofa_saha.png';
 
 import { useParams } from 'react-router';
 
@@ -12,7 +14,7 @@ import { useParams } from 'react-router';
 const ItemDetailContainer = () => {
     
     
-    const [items, setItems] = useState([]);     
+    const [dataItem, setDataItem] = useState([]);     
 
     const {id} = useParams();
 
@@ -20,33 +22,33 @@ const ItemDetailContainer = () => {
     useEffect(() => { 
 
         const productList = [
-            { id: 'sillon-herbie', title: 'Sillón Herbie', categoryId:'Sillones', description: 'Sillón Herbie de un cuerpo. Estructura fabricada en madera de Lapacho con tratamiento para exteriores. Almohadones de asiento y respaldo tapizados en tela para exteriores color natural.', material: 'Madera', terminacion: 'Tapizado', tapizado: 'Tela para exterior', medidas: '75 cm x 90 cm x 80 cm', entrega: '60 días hábiles', pictureUrl:ImgDemo, price: 16500, stock: 20, bg_color:'#fff09b' },
+            { id: '1', title: 'Sillón Herbie', categoryId:'Sillones', description: 'Sillón de un cuerpo. Estructura fabricada en madera de Lapacho con tratamiento para exteriores. Almohadones de asiento y respaldo tapizados en tela para exteriores color natural.', material: 'Madera', terminacion: 'Tapizado', tapizado: 'Tela para exterior', medidas: '75 cm x 90 cm x 80 cm', entrega: '60 días hábiles', pictureUrl:ImgDemo, price: 16500, stock: 20, bg_color:'#fff09b' },
 
-            { id: 'sillon-zoe', title: 'Sillón Zoe', categoryId:'Sillones', description: 'Sillón Herbie de un cuerpo. Estructura fabricada en madera de Lapacho con tratamiento para exteriores. Almohadones de asiento y respaldo tapizados en tela para exteriores color natural.', material: 'Madera', terminacion: 'Tapizado', tapizado: 'Tela para exterior', medidas: '75 cm x 90 cm x 80 cm', entrega: '60 días hábiles', pictureUrl:ImgDemo2, price: 16500, stock: 20, bg_color:'#8ca9ff' },
+            { id: '2', title: 'Sillón Zoe', categoryId:'Sillones', description: 'Sillón con lineas rectas cromadas y una superficie suave. Combina una estructura de acero inoxidable pulido espejo con un asiento tapizado en pana Porsche color negro.', material: 'Acero pulido', terminacion: 'Brillante, Tapizado', tapizado: 'Pana', medidas: '70 cm x 80 cm x 76 cm', entrega: '60 días hábiles', pictureUrl:ImgDemo2, price: 24300, stock: 15, bg_color:'#aac0ff' },
 
-            { id: 'silla-berlioz', title: 'Silla Berlioz', categoryId:'Sillas', description: 'Sillón Herbie de un cuerpo. Estructura fabricada en madera de Lapacho con tratamiento para exteriores. Almohadones de asiento y respaldo tapizados en tela para exteriores color natural.', material: 'Madera', terminacion: 'Tapizado', tapizado: 'Tela para exterior', medidas: '75 cm x 90 cm x 80 cm', entrega: '60 días hábiles', pictureUrl:ImgDemo3, price: 16500, stock: 20, bg_color:'#fff09b' },
+            { id: '3', title: 'Silla Berlioz', categoryId:'Sillas', description: 'Silla de comedor elegante y con rasgos sutiles y delicados. Fabricada con madera de guindo lustrada en color negro semimate y tapizada en Pana Touch color beige con tratamiento matelacé. Terminada con tachas platil que le dan este detalle distintivo.', material: 'Madera de Guindo', terminacion: 'Semimate, Tapizado', tapizado: 'Pana', medidas: '51 cm x 59 cm x 102 cm', entrega: '60 días hábiles', pictureUrl:ImgDemo3, price: 12000, stock: 60, bg_color:'#d3ffbb' },
             
-            { id: 'silla-alaska', title: 'Silla Alaska', categoryId:'Sillas', description: 'Sillón Herbie de un cuerpo. Estructura fabricada en madera de Lapacho con tratamiento para exteriores. Almohadones de asiento y respaldo tapizados en tela para exteriores color natural.', material: 'Madera', terminacion: 'Tapizado', tapizado: 'Tela para exterior', medidas: '75 cm x 90 cm x 80 cm', entrega: '60 días hábiles', pictureUrl:ImgDemo4, price: 16500, stock: 20, bg_color:'#8ca9ff' },
+            { id: '4', title: 'Silla Alaska', categoryId:'Sillas', description: 'Silla moderna que combina sutilmente lineas rectas y curvas. Fabricada con madera de guindo laqueado en color negro semimate y tapizada en pana Touch en color gris oscuro.', material: 'Madera de Guindo', terminacion: 'Semimate, Tapizado', tapizado: 'Pana', medidas: '54 cm x 81 cm x 52 cm', entrega: '60 días hábiles', pictureUrl:ImgDemo4, price: 18500, stock: 20, bg_color:'#b6e1ff' },
 
-            { id: 'sillon-Harrison', title: 'Sillón Harrison', categoryId:'Sofás', description: 'Sillón Herbie de un cuerpo. Estructura fabricada en madera de Lapacho con tratamiento para exteriores. Almohadones de asiento y respaldo tapizados en tela para exteriores color natural.', material: 'Madera', terminacion: 'Tapizado', tapizado: 'Tela para exterior', medidas: '75 cm x 90 cm x 80 cm', entrega: '60 días hábiles', pictureUrl:ImgDemo, price: 16500, stock: 20, bg_color:'#fff09b' },
+            { id: '5', title: 'Sofá Chester', categoryId:'Sofás', description: 'Sofá clásico que nunca pasa de moda. Elaborado con una estructura robusta de madera de guindo, tapizado con cuero Stargrain en color chocolate y termiando con tachas en color oxide semimante.', material: 'Madera de Guindo', terminacion: 'Capitone, Tapizado', tapizado: 'Cuero', medidas: '240 cm x 110 cm x 73 cm', entrega: '60 días hábiles', pictureUrl:ImgDemo5, price: 80500, stock: 20, bg_color:'#aeffcd' },
             
-            { id: 'sillon-Hendrix', title: 'Sillón Hendrix', categoryId:'Sofás', description: 'Sillón Herbie de un cuerpo. Estructura fabricada en madera de Lapacho con tratamiento para exteriores. Almohadones de asiento y respaldo tapizados en tela para exteriores color natural.', material: 'Madera', terminacion: 'Tapizado', tapizado: 'Tela para exterior', medidas: '75 cm x 90 cm x 80 cm', entrega: '60 días hábiles', pictureUrl:ImgDemo2, price: 16500, stock: 20, bg_color:'#8ca9ff' }
+            { id: '6', title: 'Sofá Saha', categoryId:'Sofás', description: 'Sofá fabricado en madera y tapizado en Oxford Plata. Con patas de aluminio pulido y almohadones decorativos.', material: 'Madera', terminacion: 'Tapizado', tapizado: 'Pana', medidas: '220 cm x 100 cm x 78 cm', entrega: '60 días hábiles', pictureUrl:ImgDemo6, price: 46300, stock: 20, bg_color:'#ffdede' }
         ];
 
         const getItems = () => {
             return new Promise((resolve, reject) => {
-                setTimeout(() => resolve ( productList.filter(f => f.id === id.substr(1)) ), 2000);
+                setTimeout(() => resolve ( productList.find(f => f.id === id.substr(1)) ), 2000);
             });    
         };    
             getItems().then((data) => {
-            setItems(data);
+            setDataItem(data);
         });
     }, [id]);
 
 
     return(
         <div className="item-detail-container">
-            <ItemDetail dataItem={items} />            
+            <ItemDetail item={dataItem} />            
         </div>        
     );
 }

@@ -1,6 +1,7 @@
 .items-container{
-    width: 100%;
-    padding: 0 64px;
-    display: flex;
-    padding-bottom: 238px;
+    display: grid;
+    grid-template-columns: calc(70vw / 3) calc(70vw / 3) calc(70vw / 3);    
+    grid-gap: 7.5vw;
+    margin: 0 auto;
+    padding-bottom: 6vw;
 }

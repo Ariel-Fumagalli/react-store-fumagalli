@@ -2,9 +2,8 @@ import React from 'react';
 import './ItemDetail.css';
 import ItemCount from '../ItemCount/ItemCount';
 
-    const ItemDetail = ({dataItem}) => {
+    const ItemDetail = ({item}) => {
 
-    // Función de mensaje al añadir al carrito
     const onAdd = (amount) =>{
         let unidades = 'unidades'
         if(amount < 2){
@@ -14,39 +13,35 @@ import ItemCount from '../ItemCount/ItemCount';
     }
 
         return(
-            <>                
-                {dataItem.map((e, i) => {
-                    return (
-                    <div className="item-detail-card" id={e.id} key={i}>
+            <>      
+                <div className="item-detail-card" id={item.id}>
 
-                        <div className="item-detail-img" style={{backgroundColor: `${e.bg_color}`}}> 
-                        <img src={e.pictureUrl} alt={e.title} ></img>
-                        </div>
-
-                        <div className="item-detail-description">
-                            <div>
-                                <h2>{e.title}</h2>
-                                <h4>{e.description}</h4>
-
-                                <ul>
-                                    <li><strong>Material</strong> - {e.material}</li>
-                                    <li><strong>Terminación</strong> - {e.terminacion}</li>
-                                    <li><strong>Tapizado</strong> - {e.tapizado}</li>
-                                    <li><strong>Medidas</strong> - {e.medidas}</li>
-                                    <li><strong>Entrega</strong> - {e.entrega}</li>
-                                </ul>
-
-                                <div className="item-price-and-count">
-                                    <p>${e.price}</p>                            
-                                    <ItemCount stock={7} initial={1} onAdd={onAdd} bg={e.bg_color} />
-                                </div>
-
-                            </div>
-                        </div>                       
-
+                    <div className="item-detail-img" style={{backgroundColor: `${item.bg_color}`}}> 
+                        <img src={item.pictureUrl} alt={item.title} ></img>
                     </div>
-                    );
-                })}
+
+                    <div className="item-detail-description">
+                        <div>
+                            <h2>{item.title}</h2>
+                            <h4>{item.description}</h4>
+
+                            <ul>
+                                <li><strong>Material</strong> - {item.material}</li>
+                                <li><strong>Terminación</strong> - {item.terminacion}</li>
+                                <li><strong>Tapizado</strong> - {item.tapizado}</li>
+                                <li><strong>Medidas</strong> - {item.medidas}</li>
+                                <li><strong>Entrega</strong> - {item.entrega}</li>
+                            </ul>
+
+                            <div className="item-price-and-count">
+                                <p>${item.price}</p>                            
+                                <ItemCount stock={item.stock} initial={1} onAdd={onAdd} bg={item.bg_color} />
+                            </div>
+
+                        </div>
+                    </div>                       
+
+                </div>
             </>        
         );        
     }
