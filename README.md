@@ -1,6 +1,6 @@
 # ROHE store
 
-Proyecto desarrollado por Ariel Fumagalli, para el curso de React.js brindado por [https://www.coderhouse.com/online/reactjs](Coderhouse).
+Proyecto desarrollado por Ariel Fumagalli, para el curso de React.js brindado por Coderhouse.
 
 ## Correr la App
 
@@ -26,7 +26,5 @@ Actualmente el proyecto cuenta con:
 
 ### Demo navegación
 
-! [texto alternativo] (https://github.com/Ariel-Fumagalli/react-store-fumagalli/tree/master/src/assets/images/test.gif "Demo navegación")
-
-
+![Demo navegación](https://github.com/Ariel-Fumagalli/react-store-fumagalli/tree/master/src/assets/images/test. gif) / ! [](https://github.com/Ariel-Fumagalli/react-store-fumagalli/tree/master/src/assets/images/test. gif)
 
