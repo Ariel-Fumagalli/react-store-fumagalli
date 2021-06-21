@@ -1,5 +1,4 @@
 
-![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
 # ROHE store
 
 Proyecto desarrollado por Ariel Fumagalli, para el curso de React.js brindado por Coderhouse.
@@ -28,6 +27,4 @@ Actualmente el proyecto cuenta con:
 
 ### Demo navegación
 
-
-
-![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+![Alt Text](https://github.com/Ariel-Fumagalli/react-store-fumagalli/tree/master/src/assets/images/test.gif)
