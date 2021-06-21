@@ -26,5 +26,4 @@ Actualmente el proyecto cuenta con:
 
 ### Demo navegación
 
-![Demo navegación](https://github.com/Ariel-Fumagalli/react-store-fumagalli/tree/master/src/assets/images/test. gif) / ! [](https://github.com/Ariel-Fumagalli/react-store-fumagalli/tree/master/src/assets/images/test. gif)
-
+![](https://github.com/Ariel-Fumagalli/react-store-fumagalli/tree/master/src/assets/images/test.gif)
