@@ -4,21 +4,25 @@ import ItemCount from '../ItemCount/ItemCount';
 
     const ItemDetail = ({item}) => {
 
+    const [quantityToAdd, setQuantityToAdd] = useState();
     const [addCartStatus, setAddCartStatus] = useState(false);
     const [viewCartStatus, setViewCartStatus] = useState(false);
 
-    const onAdd = (quantityToAdd) =>{
-        /* let unidades = 'unidades'
-        if(quantityToAdd < 2){
-            unidades = 'unidad'
-        } */
+    const onAdd = (value) =>{        
 
+        setQuantityToAdd(value);
         setAddCartStatus(true);
         setViewCartStatus(true);
 
-        // alert(`Agregaste ${quantityToAdd} ${unidades} al carrito`);          
+        /* let unidades = 'unidades'
+        if(value < 2){
+            unidades = 'unidad'
+        }
 
+        alert(`Agregaste ${value} ${unidades} al carrito`);   */             
     }
+
+    console.log(quantityToAdd);
 
         return(
             <>      

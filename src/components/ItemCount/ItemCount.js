@@ -4,24 +4,24 @@ import { Link } from 'react-router-dom';
 
 const ItemCount = ({ stock, initial, onAdd, bg, addCartStatus, viewCartStatus }) => {
 
-    const [items, setItems] = useState(initial)
+    const [quantity, setQuantity] = useState(initial)
 
     const addItem = () => {
-        items < stock ? setItems(items + 1) : alert(`Actualmente solo disponemos de ${stock} unidades en stock`)
+        quantity < stock ? setQuantity(quantity + 1) : alert(`Actualmente solo disponemos de ${stock} unidades en stock`)
     }
 
     const removeItem = () => {
-        items >= 2 && setItems(items - 1)
+        quantity >= 2 && setQuantity(quantity - 1)
     }
 
     return(
         <>
             <div className="cont-itemCount">
                 <i className="counterButton remove-ico" onClick={removeItem}></i>
-                <span className="counterAmount">{items}</span>
+                <span className="counterAmount">{quantity}</span>
                 <i className="counterButton add-ico" onClick={addItem}></i>
             </div>
-            <button className={addCartStatus ? 'btn-addCart hidden' : 'btn-addCart'} style={{backgroundColor: `${bg}`}} onClick={ () =>onAdd(items) }>agregar al carrito</button>
+            <button className={addCartStatus ? 'btn-addCart hidden' : 'btn-addCart'} style={{backgroundColor: `${bg}`}} onClick={ () =>onAdd(quantity) }>agregar al carrito</button>
             <Link to='/cart' className={viewCartStatus ? 'btn-view-cart' : 'btn-view-cart hidden'}>ver carrito</Link>            
         </>        
     );
