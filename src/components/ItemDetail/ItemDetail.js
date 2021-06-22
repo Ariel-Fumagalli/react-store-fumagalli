@@ -1,15 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './ItemDetail.css';
 import ItemCount from '../ItemCount/ItemCount';
 
     const ItemDetail = ({item}) => {
 
-    const onAdd = (amount) =>{
-        let unidades = 'unidades'
-        if(amount < 2){
+    const [addCartStatus, setAddCartStatus] = useState(false);
+    const [viewCartStatus, setViewCartStatus] = useState(false);
+
+    const onAdd = (quantityToAdd) =>{
+        /* let unidades = 'unidades'
+        if(quantityToAdd < 2){
             unidades = 'unidad'
-        }
-        alert(`Agregaste ${amount} ${unidades} al carrito`);  
+        } */
+
+        setAddCartStatus(true);
+        setViewCartStatus(true);
+
+        // alert(`Agregaste ${quantityToAdd} ${unidades} al carrito`);          
+
     }
 
         return(
@@ -35,7 +43,7 @@ import ItemCount from '../ItemCount/ItemCount';
 
                             <div className="item-price-and-count">
                                 <p>${item.price}</p>                            
-                                <ItemCount stock={item.stock} initial={1} onAdd={onAdd} bg={item.bg_color} />
+                                <ItemCount stock={item.stock} initial={1} onAdd={onAdd} bg={item.bg_color} addCartStatus={addCartStatus} viewCartStatus={viewCartStatus}/>
                             </div>
 
                         </div>
