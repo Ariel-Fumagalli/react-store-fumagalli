@@ -1,7 +1,7 @@
 
 # ROHE store
 
-Proyecto desarrollado por Ariel Fumagalli, para el curso de React.js brindado por Coderhouse.
+Proyecto desarrollado por Ariel Fumagalli, para el curso de React.js brindado por Coderhouse (En desarrollo).
 
 ## Correr la App
 
