@@ -1,28 +1,28 @@
 import React, { useState } from 'react';
 import './ItemDetail.css';
 import ItemCount from '../ItemCount/ItemCount';
+import { useCartContext } from '../../context/CartContext';
 
     const ItemDetail = ({item}) => {
 
-    const [quantityToAdd, setQuantityToAdd] = useState();
+    //const [quantityToAdd, setQuantityToAdd] = useState();
     const [addCartStatus, setAddCartStatus] = useState(false);
     const [viewCartStatus, setViewCartStatus] = useState(false);
+    const { addItem, removeItem } = useCartContext();
 
     const onAdd = (value) =>{        
-
-        setQuantityToAdd(value);
+ 
+        //setQuantityToAdd(value);
         setAddCartStatus(true);
         setViewCartStatus(true);
-
-        /* let unidades = 'unidades'
-        if(value < 2){
-            unidades = 'unidad'
-        }
-
-        alert(`Agregaste ${value} ${unidades} al carrito`);   */             
+        addItem(item, value);  
     }
 
-    console.log(quantityToAdd);
+
+    const onRemove = (value) =>{ 
+        removeItem(value)
+    }
+    
 
         return(
             <>      
@@ -47,7 +47,7 @@ import ItemCount from '../ItemCount/ItemCount';
 
                             <div className="item-price-and-count">
                                 <p>${item.price}</p>                            
-                                <ItemCount stock={item.stock} initial={1} onAdd={onAdd} bg={item.bg_color} addCartStatus={addCartStatus} viewCartStatus={viewCartStatus}/>
+                                <ItemCount id={item.id} stock={item.stock} initial={1} onAdd={onAdd} onRemove={onRemove} bg={item.bg_color} addCartStatus={addCartStatus} viewCartStatus={viewCartStatus}/>
                             </div>
 
                         </div>
