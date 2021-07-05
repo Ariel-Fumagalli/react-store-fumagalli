@@ -5,22 +5,19 @@ import { useCartContext } from '../../context/CartContext';
 
     const ItemDetail = ({item}) => {
 
-    //const [quantityToAdd, setQuantityToAdd] = useState();
-    const [addCartStatus, setAddCartStatus] = useState(false);
-    const [viewCartStatus, setViewCartStatus] = useState(false);
+    const [addCartClick, setAddCartClick] = useState(false);
+
     const { addItem, removeItem } = useCartContext();
 
-    const onAdd = (value) =>{        
- 
-        //setQuantityToAdd(value);
-        setAddCartStatus(true);
-        setViewCartStatus(true);
-        addItem(item, value);  
+    const onAdd = (quantity) =>{ 
+
+        setAddCartClick(true);
+        addItem(item, quantity);  
     }
 
 
-    const onRemove = (value) =>{ 
-        removeItem(value)
+    const onRemove = (id) =>{ 
+        removeItem(id)
     }
     
 
@@ -47,7 +44,7 @@ import { useCartContext } from '../../context/CartContext';
 
                             <div className="item-price-and-count">
                                 <p>${item.price}</p>                            
-                                <ItemCount id={item.id} stock={item.stock} initial={1} onAdd={onAdd} onRemove={onRemove} bg={item.bg_color} addCartStatus={addCartStatus} viewCartStatus={viewCartStatus}/>
+                                <ItemCount id={item.id} stock={item.stock} initial={1} onAdd={onAdd} onRemove={onRemove} bg={item.bg_color} addCartClicked={addCartClick}/>
                             </div>
 
                         </div>
