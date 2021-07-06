@@ -7,7 +7,7 @@ export const useCartContext = () => useContext(CartContext);
 export default function CartProvider({ defaultCart = [], children }) {
     
   const [cart, setCart] = useState(defaultCart);
-
+  const [quantityItemsAdded, setQuantityItemsAdded] = useState(0);
 
   function isInCart({ id }) {
     const findToId = cart.find(x => x.item.id === id);
@@ -20,28 +20,29 @@ export default function CartProvider({ defaultCart = [], children }) {
     if ( isInCart(item) ) {
       const toChange = cart.find(x => x.item.id === item.id);
       toChange.quantity += quantity;
-      console.log(cart);
+      setQuantityItemsAdded(quantityItemsAdded + quantity)
     } else{ 
-      setCart( [...cart, {item, quantity}] );  
+      setCart( [...cart, {item, quantity}] );
+      setQuantityItemsAdded(quantityItemsAdded + quantity) 
     }   
   }
 
 
-  function removeItem( id ) {
-    const filtredItems = cart.filter(x => x.item.id !== id);
-    setCart(filtredItems);    
+  function removeItem( itemId, quantity  ) {
+    const filtredItems = cart.filter(x => x.item.id !== itemId);
+    setCart(filtredItems);
+    setQuantityItemsAdded(quantityItemsAdded - quantity)     
   }
 
 
   function clear() {
     setCart(defaultCart);
+    setQuantityItemsAdded(0)   
   }
 
 
-  console.log(cart);
-
   return (
-    <CartContext.Provider value={{ addItem, removeItem, clear }}> {children} </CartContext.Provider>
+    <CartContext.Provider value={{ cart, quantityItemsAdded, addItem, removeItem, clear }}> {children} </CartContext.Provider>
   );
 
 }

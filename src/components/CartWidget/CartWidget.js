@@ -1,13 +1,17 @@
 import React from 'react';
-import carritoIcon from '../../assets/icons/carrito-ico.svg';
+import './CartWidget.css';
+import { Link } from 'react-router-dom';
+import { useCartContext } from '../../context/CartContext';
 
 const CartWidget = () => {
+
+    const { quantityItemsAdded } = useCartContext();
+    
     return(
-        <div>
-            <img src={carritoIcon} alt="icono carrito de compras" height="36" width="36" className="carrito-ico"/>
-        </div>        
-    );
+        <Link to='/cart' className={quantityItemsAdded !== 0 ? 'cart-widget active' : 'cart-widget'}>
+            {quantityItemsAdded !== 0 && <span>{quantityItemsAdded}</span> }            
+        </Link>        
+    );  
 }
 
 export default CartWidget;
-

@@ -7,19 +7,13 @@ import { useCartContext } from '../../context/CartContext';
 
     const [addCartClick, setAddCartClick] = useState(false);
 
-    const { addItem, removeItem } = useCartContext();
+    const { addItem } = useCartContext();
 
     const onAdd = (quantity) =>{ 
 
         setAddCartClick(true);
         addItem(item, quantity);  
-    }
-
-
-    const onRemove = (id) =>{ 
-        removeItem(id)
-    }
-    
+    }    
 
         return(
             <>      
@@ -44,7 +38,7 @@ import { useCartContext } from '../../context/CartContext';
 
                             <div className="item-price-and-count">
                                 <p>${item.price}</p>                            
-                                <ItemCount id={item.id} stock={item.stock} initial={1} onAdd={onAdd} onRemove={onRemove} bg={item.bg_color} addCartClicked={addCartClick}/>
+                                <ItemCount id={item.id} stock={item.stock} initial={1} onAdd={onAdd} bg={item.bg_color} addCartClicked={addCartClick}/>
                             </div>
 
                         </div>

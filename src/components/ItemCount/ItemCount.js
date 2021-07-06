@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './ItemCount.css';
 import { Link } from 'react-router-dom';
 
-const ItemCount = ({ id, stock, initial, onAdd, onRemove, bg, addCartClicked }) => {
+const ItemCount = ({ stock, initial, onAdd, bg, addCartClicked }) => {
 
     const [quantity, setQuantity] = useState(initial)
 
@@ -23,8 +23,6 @@ const ItemCount = ({ id, stock, initial, onAdd, onRemove, bg, addCartClicked }) 
             </div>
 
             { !addCartClicked ? <button className="btn-addCart" style={{backgroundColor: `${bg}`}} onClick={ () =>onAdd(quantity) }>agregar al carrito</button> : <Link to='/cart' className="btn-view-cart">ver carrito</Link> }        
-
-            <button onClick={ () =>onRemove(id) }>remover item</button>    
         </>        
     );
 }

@@ -1,0 +1,29 @@
+.cart-widget{
+    width: 38px;
+    height: 36px;
+    background-image: url(../../assets/icons/carrito-ico.svg);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    position: relative;
+    text-decoration: none;
+    &.active{
+        background-image: url(../../assets/icons/carrito-ico-active.svg);
+    }
+    span{
+        position: absolute;
+        top: 0;
+        left: 10.5px;
+        background-color: rgb(255, 77, 77);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 15px;
+        height: 15px;
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 100%;
+        color: #fff;
+        border-radius: 50%;    
+        padding: 10px;    
+    }
+}
