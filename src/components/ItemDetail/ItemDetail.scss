@@ -77,6 +77,11 @@
                     color: rgb(22, 22, 22);
                     padding-left: 0.4vw;
                 }
+                .cont-itemCount{
+                    &.hide-in-detail{
+                        display: none;
+                    }
+                }
             }
 
         }

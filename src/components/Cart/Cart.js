@@ -2,6 +2,7 @@ import React from 'react';
 import './Cart.css';
 import { useCartContext } from '../../context/CartContext';
 import { Link } from 'react-router-dom';
+import ItemCount from '../ItemCount/ItemCount';
 
 const Cart = () => {
 
@@ -14,7 +15,7 @@ const Cart = () => {
             <div className="cart-empty-container">
                 <p>Todavía no agregastes ítems</p>
                 <Link to='/' className="explorar">explorar productos</Link>
-            </div>
+            </div>           
         }
 
         {cart.length !== 0 &&
@@ -33,11 +34,12 @@ const Cart = () => {
                             </div>
                             
                             <div className="title-item">
-                                <h4>{e.item.title} ( x{e.quantity} )</h4>
+                                <h4>{e.item.title}</h4>
+                                <ItemCount id={e.item.id} stock={e.item.stock} initial={e.quantity} />
                             </div>
 
                             <div className="price-item">
-                                <p>${e.item.price}</p>
+                                <p>${e.item.price * e.quantity}</p>
                             </div>
 
                             <div className="remove-item">
@@ -52,6 +54,9 @@ const Cart = () => {
                     <button onClick={ () => clear() } className="clear-cart-btn">vaciar carrito</button>
                     <p>Total: {totalPrice}</p>
                 </div>
+
+                <Link to='/Checkout' className="btn-buy-cart">Comprar carrito</Link> 
+
         </div> }
   
         </>

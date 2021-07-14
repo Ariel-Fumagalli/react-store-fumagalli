@@ -1,0 +1,38 @@
+.checkout-container{
+    background-color: #f9f9f9;
+    width: 100%;
+    min-height: 100vh;  
+    padding-top: 250px;
+    display: flex;
+
+    .items-to-buy{
+        width: 49%;
+        h4{
+            font-size: 30px;
+            margin-bottom: 60px;
+        }
+
+        .item-buy{
+            display: flex;
+            .img-item{
+                width: 33%;
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            .title-item{
+                width: 33%;
+            }
+            .price-item{
+                width: 33%;
+            }
+        }
+    }
+
+    .pay-contairner{
+        width: 49%;
+        background-color: azure;
+    }
+
+}

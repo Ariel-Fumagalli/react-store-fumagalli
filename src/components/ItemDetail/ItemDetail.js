@@ -1,18 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './ItemDetail.css';
 import ItemCount from '../ItemCount/ItemCount';
 import { useCartContext } from '../../context/CartContext';
 
     const ItemDetail = ({item}) => {
 
-    const [addCartClick, setAddCartClick] = useState(false);
-
     const { addItem } = useCartContext();
 
     const onAdd = (quantity) =>{ 
-
-        setAddCartClick(true);
-        addItem(item, quantity);  
+        addItem(item, quantity);                
     }    
 
         return(
@@ -38,7 +34,7 @@ import { useCartContext } from '../../context/CartContext';
 
                             <div className="item-price-and-count">
                                 <p>${item.price}</p>                            
-                                <ItemCount id={item.id} stock={item.stock} initial={1} onAdd={onAdd} bg={item.bg_color} addCartClicked={addCartClick}/>
+                                <ItemCount id={item.id} stock={item.stock} initial={1} onAdd={onAdd} bg={item.bg_color} />
                             </div>
 
                         </div>

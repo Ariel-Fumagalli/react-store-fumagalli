@@ -42,6 +42,9 @@
             h4{
                 font-size: 20px;
             }
+            .btn-view-cart{
+                display: none;
+            }
         }
 
         .price-item{
@@ -82,6 +85,22 @@
             font-size: 16px;
         }
     }  
+
+    .btn-buy-cart{
+        background-color: #161616;
+        width: 250px;
+        color: #fff;
+        padding: 12px 25px 14px 25px;
+        cursor: pointer;
+        font-weight: 500;
+        font-size: 18px;
+        text-decoration: none;
+        text-align: center;
+        border-radius: 4px;
+        margin: 0 auto 60px auto;
+        display: block;
+        transition: all 0.2s ease;
+    }
 }
 
 .cart-empty-container{
