@@ -42,7 +42,7 @@ Abre [http://localhost:3000](http://localhost:3000) para ver el proyecto en el n
 
 La UI fue desarrollada sin librerías ni frameworks de UI, para mantener el código lo más limpio y liviano posible. Los estilos se trabajaron íntegramente en Sass como preprocesador de CSS.
 
-Se utilizaron diferentes cálculos y medidas relativas con el fin de desarrollar una interfaz visualmente escalable y fluida, que permita que el sitio se visualice de igual modo, tanto a monitores 4k (3840 x 2160) como así también en monitores con menor resolución, y así mismo se visualice correctamente en dispositivos móviles.
+Se utilizaron diferentes cálculos y medidas relativas con el fin de desarrollar una interfaz visualmente escalable y fluida, que permita que el sitio se visualice de igual modo, tanto en monitores 4k (3840 x 2160) como así también en monitores con menor resolución, y así mismo se visualice correctamente en dispositivos móviles.
 
 También, se incluyeron algunas animaciones sutiles, con el fin de generar transiciones suaves, que aportan a la navegación y a la experiencia de usuario. 
 
