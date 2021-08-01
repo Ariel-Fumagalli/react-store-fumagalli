@@ -89,6 +89,6 @@ El desafío fue realizar un proyecto despojado de todo tipo de elemento superflu
 De este modo, por medio de una estética minimalista y despojada se intentó transmitir cierto aire de sofisticación y calidad.
 
 
-### Autor
+## Autor
 
 **Ariel Fumagalli** - ( https://www.linkedin.com/in/ariel-fumagalli/ )
