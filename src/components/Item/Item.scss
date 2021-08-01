@@ -1,6 +1,13 @@
 .itemCard{
     height: calc(70vw / 3); 
     margin-bottom: 3vw; 
+    @media screen and (min-width: 768px) and (max-width: 1000px){
+        height: calc(75vw / 2);
+    }
+    @media screen and (max-width: 767px){
+        height: 90vw;
+        margin-bottom: 14vw; 
+    }
 
     &:hover{
         .item-img{
@@ -15,17 +22,46 @@
                 transition: all 0.6s ease;
             }
         }
+
         .img-description{
-            a{
+            button{
                 opacity: 1;
-                width: calc(24px + (50 - 24) * ((100vw - 1000px) / (3840 - 1000)));
-                height: calc(24px + (50 - 24) * ((100vw - 1000px) / (3840 - 1000)));
-                font-size: calc(7px + (16 - 7) * ((100vw - 1000px) / (3840 - 1000)));
+                width: calc(24px + (60 - 24) * ((100vw - 1000px) / (3840 - 1000)));
+                height: calc(24px + (60 - 24) * ((100vw - 1000px) / (3840 - 1000)));
+                font-size: calc(7px + (18 - 7) * ((100vw - 1000px) / (3840 - 1000)));
+                @media screen and (min-width: 768px) and (max-width: 1000px){
+                    width: calc(24px + (34 - 24) * ((100vw - 480px) / (1000 - 480)));
+                    height: calc(24px + (34 - 24) * ((100vw - 480px) / (1000 - 480)));
+                    font-size: calc(7px + (11 - 7) * ((100vw - 480px) / (1000 - 480)));
+                }
+                @media screen and (max-width: 767px){
+                    width: 8.5vw;
+                    height: 8.5vw;
+                    font-size: 3vw;
+                }
+            }
+            h2{
+                margin-right: calc(6px + (22 - 6) * ((100vw - 1000px) / (3840 - 1000)));  
+                @media screen and (min-width: 768px) and (max-width: 1000px){
+                    margin-right: calc(6px + (12 - 6) * ((100vw - 480px) / (1000 - 480)));
+                }
+                @media screen and (max-width: 767px){
+                    margin-right: 2vw;
+                } 
             }
             p{
                 opacity: 1;
-                font-size: calc(14px + (32 - 14) * ((100vw - 1000px) / (3840 - 1000)));                
+                font-size: calc(14px + (38 - 14) * ((100vw - 1000px) / (3840 - 1000)));                
                 margin-right: calc(6px + (22 - 6) * ((100vw - 1000px) / (3840 - 1000)));
+                @media screen and (min-width: 768px) and (max-width: 1000px){
+                    font-size: calc(14px + (20 - 14) * ((100vw - 480px) / (1000 - 480)));                
+                    margin-right: calc(6px + (12 - 6) * ((100vw - 480px) / (1000 - 480)));
+                }
+                @media screen and (max-width: 767px){
+                    opacity: 1;
+                    font-size: 5vw;
+                    margin-right: 2vw;
+                }
             }
         }
     }
@@ -34,7 +70,13 @@
         width: 100%;
         height: 75%;
         position: relative;        
-        margin: 0 auto 1.2vw auto;    
+        margin: 0 auto 1.2vw auto;   
+        @media screen and (min-width: 768px) and (max-width: 1000px){
+            margin: 0 auto 2.4vw auto;   
+        } 
+        @media screen and (max-width: 767px){
+            margin-bottom: 6.5vw;
+        }
         img{
             width: auto;
             height: 90%;
@@ -44,7 +86,11 @@
             right: 0;
             margin: 0 auto;
             z-index: 2;  
-            transition: all 0.6s ease;            
+            transition: all 0.6s ease;     
+            @media screen and (max-width: 767px){
+                height: 100%;
+                bottom: 10%;     
+            }  
         }
         span{
             width: 100%;
@@ -54,12 +100,17 @@
             opacity: 0;
             transition: all 0.6s ease;
             bottom: 0;
+            @media screen and (max-width: 767px){
+                height: 72%;
+                opacity: 1;
+            }
         }        
     }    
 
     .img-description{
-        width: 90%;
+        width: 100%;
         margin: 0 auto;
+
         div{
             width: 98%;
             height: 2vw;
@@ -68,10 +119,16 @@
             justify-content: center;
             align-items: center;
             h2{
-                font-size: calc(14px + (32 - 14) * ((100vw - 1000px) / (3840 - 1000)));
+                font-size: calc(14px + (38 - 14) * ((100vw - 1000px) / (3840 - 1000)));
                 font-weight: 500;
-                color: #000000;  
-                margin-right: calc(6px + (22 - 6) * ((100vw - 1000px) / (3840 - 1000)));   
+                color: #000000;    
+                @media screen and (min-width: 768px) and (max-width: 1000px){
+                    font-size: calc(14px + (20 - 14) * ((100vw - 480px) / (1000 - 480)));
+                }
+                @media screen and (max-width: 767px){
+                    font-size: 5vw;
+                    margin-right: 2vw;
+                }
             }
             p{
                 font-size: 0px;
@@ -79,11 +136,20 @@
                 opacity: 0;
                 transition: all 0.3s ease;
                 margin-right: 0;
+                @media screen and (max-width: 767px){
+                    opacity: 1;
+                    font-size: 5vw;
+                    margin-right: 2vw;
+                }
             }
-        }  
-        a{
+        } 
+         
+        button{
+            background-color: transparent;
+            outline: inherit;
             width: 0px;
-            height: 0px;
+            height: 0px; 
+            padding: 0;           
             display: flex;
             justify-content: center;
             align-items: center;
@@ -96,7 +162,14 @@
             border: 1px solid rgb(66, 66, 66);
             border-radius: 50%;
             opacity: 0;
+            cursor: pointer;
             transition: all 0.4s ease;
+            @media screen and (max-width: 767px){
+                opacity: 1;
+                width: 8.5vw;
+                height: 8.5vw;
+                font-size: 3vw;
+            }
             &:hover{
                 background-color: #000;
                 color: #fff;
@@ -107,135 +180,3 @@
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .itemCard{
-    height: calc(70vw / 3); 
-    margin-bottom: 3vw; 
-    transition: all 0.6s ease;
-    background-color: aquamarine;
-
-    &:hover{
-        .item-img{
-            span{
-                height: 72%;
-                opacity: 1;
-                transition: all 0.6s ease;            
-            }
-            img{
-                height: 100%;
-                bottom: 10%;
-                transition: all 0.6s ease;
-            }
-        }
-        .img-description{
-            a{
-                opacity: 1;
-                width: calc(24px + (50 - 24) * ((100vw - 1000px) / (3840 - 1000)));
-                height: calc(24px + (50 - 24) * ((100vw - 1000px) / (3840 - 1000)));
-                font-size: calc(7px + (16 - 7) * ((100vw - 1000px) / (3840 - 1000)));
-            }
-            p{
-                opacity: 1;
-                font-size: calc(14px + (32 - 14) * ((100vw - 1000px) / (3840 - 1000)));                
-                margin-right: calc(6px + (22 - 6) * ((100vw - 1000px) / (3840 - 1000)));
-            }
-        }
-    }
-
-    .item-img{
-        width: 100%;
-        height: 75%;
-        position: relative;        
-        margin: 0 auto 1.2vw auto;    
-        img{
-            width: auto;
-            height: 90%;
-            position: absolute;              
-            bottom: 0;
-            left: 0;
-            right: 0;
-            margin: 0 auto;
-            z-index: 2;  
-            transition: all 0.6s ease;            
-        }
-        span{
-            width: 100%;
-            height: 1%;
-            position: absolute; 
-            z-index: 1;
-            opacity: 0;
-            transition: all 0.6s ease;
-            bottom: 0;
-        }        
-    }    
-
-    .img-description{
-        width: 90%;
-        margin: 0 auto;
-        div{
-            width: 98%;
-            height: 2vw;
-            margin: 0 auto 1vw auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            h2{
-                font-size: calc(14px + (32 - 14) * ((100vw - 1000px) / (3840 - 1000)));
-                font-weight: 500;
-                color: #000000;  
-                margin-right: calc(6px + (22 - 6) * ((100vw - 1000px) / (3840 - 1000)));   
-            }
-            p{
-                font-size: 0px;
-                font-weight: 300;
-                opacity: 0;
-                transition: all 0.3s ease;
-                margin-right: 0;
-            }
-        }  
-        a{
-            width: 0px;
-            height: 0px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 0px;
-            font-weight: 500;
-            letter-spacing: 0.05rem;
-            color: #000;
-            text-decoration: none;
-            text-transform: uppercase;
-            border: 1px solid rgb(66, 66, 66);
-            border-radius: 50%;
-            opacity: 0;
-            transition: all 0.4s ease;
-            &:hover{
-                background-color: #000;
-                color: #fff;
-                border: 1px solid #000;
-                opacity: 1;
-                transition: all 0.3s ease;
-            }
-        }
-    }
-} */
-            
-          
-            
-          

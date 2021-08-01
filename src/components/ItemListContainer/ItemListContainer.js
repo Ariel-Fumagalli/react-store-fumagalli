@@ -7,10 +7,12 @@ import { useParams } from 'react-router';
 const ItemListContainer = () => {
 
     const [items, setItems] = useState([]);
-    const {categoryId} = useParams();
+    const [fadeOutContainer, setFadeOutContainer] = useState(false);
+    const {categoryId} = useParams(); 
 
-    let title;
-    !categoryId ? title = 'Home' : title = categoryId; 
+    const applyFade = () =>{ 
+        setFadeOutContainer(true);                
+    }
 
     useEffect(() =>{ 
 
@@ -29,11 +31,11 @@ const ItemListContainer = () => {
     }, [categoryId]);
 
     return(
-        <div className="ItemListContainer">
-            <div className="greeting-container">                
-                <h2>{title}</h2>
+        <div className={!fadeOutContainer ? 'ItemListContainer' : 'ItemListContainer fade-out'}>
+            <div className="section-name-container"> 
+                { !categoryId ? <h2 className="title-home">Muebles de Diseño</h2> : <h2>{categoryId}</h2> }
             </div>
-            <ItemList items={items} /> 
+            <ItemList items={items} fade={applyFade} /> 
         </div>        
     );
 }

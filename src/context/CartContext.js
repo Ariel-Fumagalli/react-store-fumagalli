@@ -17,7 +17,6 @@ export default function CartProvider({ defaultCart = [], children }) {
 
 
   function addItem( item, quantity ) {
-
     if ( isInCart(item) ) {
       const toChange = cart.find(x => x.item.id === item.id);
       toChange.quantity += quantity;
@@ -30,9 +29,9 @@ export default function CartProvider({ defaultCart = [], children }) {
 
 
   function addItemQuantity( itemInCart ) {    
-      const toChange = cart.find(x => x.item.id === itemInCart.item.id);
-      toChange.quantity += 1;
-      setQuantityItemsAdded(quantityItemsAdded + 1)  
+    const toChange = cart.find(x => x.item.id === itemInCart.item.id);
+    toChange.quantity += 1;
+    setQuantityItemsAdded(quantityItemsAdded + 1)  
   }
 
 

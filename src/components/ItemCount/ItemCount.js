@@ -32,12 +32,12 @@ const ItemCount = ({ id, stock, initial, onAdd, bg }) => {
     return(
         <>
             <div className={itemInCart ? 'cont-itemCount hide-in-detail' : 'cont-itemCount'}>
-                <i className="counterButton remove-ico" onClick={remove}></i>
-                <span className="counterAmount">{quantity}</span>
-                <i className="counterButton add-ico" onClick={add}></i>
+                <i className="counter-btn remove-ico" onClick={remove}></i>
+                <p className="counter-quantity"><span>{quantity}</span></p>
+                <i className="counter-btn add-ico" onClick={add}></i>
             </div>
 
-            { !itemInCart ? <button className="btn-addCart" style={{backgroundColor: `${bg}`}} onClick={ () =>onAdd(quantity) }>agregar al carrito</button> : <Link to='/cart' className="btn-view-cart">ver carrito</Link> }        
+            { !itemInCart ? <button className="btn-add-cart" style={{backgroundColor: `${bg}`}} onClick={ () =>onAdd(quantity) }>Agregar al carrito</button> : <Link to='/cart' className="btn-view-cart">Ver carrito</Link> }        
         </>        
     );
 }

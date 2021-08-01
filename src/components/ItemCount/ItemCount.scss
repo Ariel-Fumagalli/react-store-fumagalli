@@ -1,88 +1,124 @@
 
-    .cont-itemCount{
-        width: calc(90px + (140 - 90) * ((100vw - 1000px) / (3840 - 1000)));
-        display: flex;        
-        justify-content: space-between;
-        align-items: center;
-        .counterButton{
-            background-color: #fff;
-            width: 30px;
-            height: 30px;
-            display: block;
-            border-radius: 50%;            
-            cursor: pointer;
-            transition: all 0.2s ease;            
-            &:hover{
-                box-shadow: 0px 4px 12px -8px rgba(0,0,0,0.7);
-                transform: scale(1.15);
-                transition: all 0.2s ease;
-            }
-            &:active{
-                background-color: rgb(231, 231, 231);
-                box-shadow: 0px 4px 12px -8px rgba(0,0,0,0);
-                transform: scale(1);
-            }
-            &.remove-ico{
-                background-image: url(../../assets/icons/remove-ico.svg);
-            }
-            &.add-ico{
-                background-image: url(../../assets/icons/add-ico.svg);
-            }
+.cont-itemCount{
+    width: calc(78px + (180 - 78) * ((100vw - 1000px) / (3840 - 1000)));
+    display: flex;        
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+    @media screen and (max-width: 767px){
+        width: 104px;
+    }
 
+    .counter-btn{
+        width: calc(20px + (40 - 20) * ((100vw - 1000px) / (3840 - 1000)));
+        height: calc(20px + (40 - 20) * ((100vw - 1000px) / (3840 - 1000)));
+        display: block;
+        border-radius: 50%;            
+        cursor: pointer;
+        transition: all 0.2s ease;     
+        @media screen and (max-width: 767px){
+            width: 28px;
+            height: 28px;
+        }       
+        &:hover{
+            transform: scale(1.15);
+            transition: all 0.2s ease;
         }
-        .counterAmount{
+        &:active{
+            background-color: rgb(231, 231, 231);
+            transform: scale(1);
+        }
+        &.remove-ico{
+            background-image: url(../../assets/icons/remove-ico.svg);
+        }
+        &.add-ico{
+            background-image: url(../../assets/icons/add-ico.svg);
+        }
+
+    }
+
+    .counter-quantity{
+        width: calc(30px + (80 - 30) * ((100vw - 1000px) / (3840 - 1000)));
+        height: calc(30px + (80 - 30) * ((100vw - 1000px) / (3840 - 1000)));            
+        border: 1px solid rgba(0,0,0,0.3);
+        border-radius: 50%;            
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media screen and (max-width: 767px){
+            width: 36px!important;
+            height: 36px!important;                                
+        }            
+        span{
             font-size: calc(16px + (42 - 16) * ((100vw - 1000px) / (3840 - 1000)));
-            font-weight: 700;
+            font-weight: 700!important;
+            padding-bottom: 2px;
+            @media screen and (max-width: 767px){
+                font-size: 16px;
+            }
         }
     }
-    .btn-addCart{
-        background-color: transparent;
-        width: 196px;
-        color: inherit;
-        border: none;
-        padding: 12px 25px 14px 25px;
-        cursor: pointer;
-        outline: inherit;
-        font-weight: 500;
-        font-size: 18px;
-        border-radius: 4px;
-        margin: 0;
-        display: block;
+}
+
+.btn-add-cart{
+    background-color: transparent;
+    color: inherit;
+    border: none;
+    padding: 0.7vw 1.2vw 0.8vw 1.2vw;
+    cursor: pointer;
+    outline: inherit;
+    font-weight: 500;
+    font-size: calc(14px + (30 - 14) * ((100vw - 1000px) / (3840 - 1000)));
+    border-radius: 4px;
+    margin: 0;
+    display: block;
+    transition: all 0.2s ease;
+    @media screen and (max-width: 767px){
+        width: 100%;
+        margin-top: 14px;
+        font-size: 16px;
+        padding: 20px 0 22px 0;
+    }
+    &:hover{       
         transition: all 0.2s ease;
-        &:hover{       
-            transition: all 0.2s ease;
-        }
-        &:active{
-            filter: brightness(90%);
-            transform: scale(0.96);
-        }
-        &.hidden{
-            display: none;
-        }
     }
-    .btn-view-cart{
-        background-color: #161616;
-        width: 196px;
-        color: #fff;
-        padding: 12px 25px 14px 25px;
-        cursor: pointer;
-        font-weight: 500;
-        font-size: 18px;
-        text-decoration: none;
-        text-align: center;
-        border-radius: 4px;
-        margin: 0;
-        display: block;
+    &:active{
+        filter: brightness(90%);
+        transform: scale(0.96);
+    }
+    &.hidden{
+        display: none;
+    }
+}
+
+.btn-view-cart{
+    background-color: #161616;
+    color: #fff;
+    padding: 0.7vw 1.2vw 0.8vw 1.2vw;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: calc(14px + (30 - 14) * ((100vw - 1000px) / (3840 - 1000)));
+    text-decoration: none;
+    text-align: center;
+    border-radius: 4px;
+    margin: 0;
+    display: block;
+    transition: all 0.2s ease;
+    @media screen and (max-width: 767px){
+        width: 100%;
+        margin-top: 14px;
+        font-size: 16px;
+        padding: 20px 0 22px 0;
+    }
+    &:hover{     
+        background-color: #000;  
         transition: all 0.2s ease;
-        &:hover{     
-            background-color: #000;  
-            transition: all 0.2s ease;
-        }
-        &:active{
-            filter: brightness(90%);
-            transform: scale(0.96);
-        }
-        &.hidden{
-            display: none;
-        }
     }
+    &:active{
+        filter: brightness(90%);
+        transform: scale(0.96);
+    }
+    &.hidden{
+        display: none;
+    }
+}

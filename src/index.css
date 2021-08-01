@@ -41,11 +41,36 @@
 
 body,h1,h2,h3,h4,p,a,button{
   margin: 0;
-  /* font-family: 'Montserrat', sans-serif; */
   font-family: 'Circular', sans-serif;
   line-height: normal;  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;        
+  height: 8px;        
+}
+
+body::-webkit-scrollbar-thumb {    
+  background: rgba(0, 0, 0, 0.9);    
+}
+
+body::-webkit-scrollbar-thumb:hover {    
+  background: rgba(0, 0, 0, 1);    
+}
+
+body::-webkit-scrollbar-thumb:active {    
+  background: rgba(0, 0, 0, 1);    
+}
+
+body::-webkit-scrollbar-track {    
+  background: #f9f9f9;    
+}
+
+body::-webkit-scrollbar-track:hover,    
+body::-webkit-scrollbar-track:active {    
+  background: #f9f9f9;    
 }
 
 code {

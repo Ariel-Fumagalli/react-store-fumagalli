@@ -1,30 +1,43 @@
 import React from 'react';
 import './Item.css';
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
-    const Item = ({ id, picture, title, price, bgColor }) => {
+const Item = ({ id, picture, title, price, bgColor, transition }) => {
 
-        return(
+    let history = useHistory();
+
+    const viewItem = () => {    
+        transition();        
+        setTimeout(() => {
+            history.push(`/item/:${id}`);
+        }, 600);      
+    };
+
+    const formatNumber = (number) => {
+        return new Intl.NumberFormat().format(number)
+    }; 
+
+    return(
             
-            <div className="itemCard">               
+        <div className="itemCard">               
                 
-                <div className="item-img">
-                    <img src={picture} alt={title} />
-                    <span style={{backgroundColor: `${bgColor}`}}></span>
-                </div>
+            <div className="item-img">
+                <img src={picture} alt={title} />
+                <span style={{backgroundColor: `${bgColor}`}}></span>
+            </div>
 
-                <div className="img-description">
-                    <div>
-                        <h2>{title}</h2>
-                        <p>-</p>
-                        <p>${price}</p>
-                        <p>-</p>
-                        <Link to={`/item/:${id}`}>ver</Link> 
-                    </div>                       
-                </div>  
+            <div className="img-description">
+                <div>
+                    <h2>{title}</h2>
+                    <p>-</p>
+                    <p>${formatNumber(price)}</p>
+                    <p>-</p>
+                    <button type="button" onClick={ () => viewItem()}>ver</button>
+                </div>                       
+            </div>  
                          
-            </div>      
-        );
-    }
+        </div>      
+    );
+}
     
-    export default Item;
+export default Item;

@@ -6,9 +6,16 @@
     background-repeat: no-repeat;
     position: relative;
     text-decoration: none;
+    opacity: 0;  
+    animation-name: menuOpen;
+    animation-delay: 0.2s;
+    animation-duration: 2.5s;
+    animation-fill-mode: forwards;
+
     &.active{
         background-image: url(../../assets/icons/carrito-ico-active.svg);
     }
+    
     span{
         position: absolute;
         top: 0;

@@ -1,2 +1,2 @@
-.items-container{display:-ms-grid;display:grid;-ms-grid-columns:calc(70vw / 3) calc(70vw / 3) calc(70vw / 3);grid-template-columns:calc(70vw / 3) calc(70vw / 3) calc(70vw / 3);grid-gap:7.5vw;margin:0 auto;padding-bottom:6vw}
+.items-container{display:-ms-grid;display:grid;-ms-grid-columns:calc(70vw / 3) calc(70vw / 3) calc(70vw / 3);grid-template-columns:calc(70vw / 3) calc(70vw / 3) calc(70vw / 3);grid-gap:7.5vw;margin:0 auto;padding-bottom:6vw}@media screen and (min-width: 768px) and (max-width: 1000px){.items-container{-ms-grid-columns:calc(75vw / 2) calc(75vw / 2);grid-template-columns:calc(75vw / 2) calc(75vw / 2)}}@media screen and (max-width: 767px){.items-container{-ms-grid-columns:90vw;grid-template-columns:90vw}}
 /*# sourceMappingURL=ItemList.css.map */
