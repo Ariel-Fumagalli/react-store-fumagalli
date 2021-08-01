@@ -21,19 +21,19 @@ La aplicación permite navegar un catálogo de productos, filtrar los productos 
 - Firebase (8.0.2)
 
 
-## Descargar y levantar el proyecto
+## Levantar el proyecto
 
 **Clonar el repositorio:**
 
-git clone https://github.com/Ariel-Fumagalli/react-store-fumagalli.git
+#### `git clone https://github.com/Ariel-Fumagalli/react-store-fumagalli.git`
 
 **Instalar las dependencias:**
 
-### `npm install`
+#### `npm install`
 
 **En la raíz del proyecto correr:**
 
-### `npm start`
+#### `npm start`
 
 Abre [http://localhost:3000](http://localhost:3000) para ver el proyecto en el navegador.
 
