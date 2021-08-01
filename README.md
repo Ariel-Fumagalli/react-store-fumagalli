@@ -78,7 +78,7 @@ Esta decisión responde principalmente a una cuestión de usabilidad y diseño U
 ![Alt Text](https://media.giphy.com/media/r2jqOKpxRxPwKVOwOl/giphy.gif)
 
 
-## Sobre el diseño UI
+## Diseño visual y conceptual
 
 El diseño UI se trabajó a partir de decisiones que responden a cuestiones racionales, de usabilidad y comunicacionales.
 
