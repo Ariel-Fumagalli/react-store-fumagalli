@@ -23,15 +23,15 @@ La aplicación permite navegar un catálogo de productos, filtrar los productos 
 
 ## Descargar y levantar el proyecto
 
-1. Clonar el repositorio:
+**Clonar el repositorio:**
 
 git clone https://github.com/Ariel-Fumagalli/react-store-fumagalli.git
 
-2. Instalar las dependencias:
+**Instalar las dependencias:**
 
 ### `npm install`
 
-3. En la raíz del proyecto correr:
+**En la raíz del proyecto correr:**
 
 ### `npm start`
 
@@ -59,10 +59,10 @@ Se utilizó Link y NavLink para navegar a los componentes y los hook useParams y
 
 El proyecto cuenta con las siguientes rutas:
 
--	"/" navega al componente ItemListContainer
--	"/category/:categoryId" navega a una categoría de productos, mediante el filtrado a partir del Id de categoría, utilizando el hook useParams.
--	"/item/:id" navega al componente ItemDetailContainer, filtrando un produto por médio del Id autogenerado desde Firebase, mediante la utilización de useParams. El componente ItemDetailContainer devuelve e imprime en el DOM el componente ItemDetail, el cual contiene toda la información del producto. 
--	"/cart" navega al componente Cart, mediante el cual se muestran en pantalla todos los productos que el usuario va agregando al carrito.
+-	**"/"** navega al componente ItemListContainer
+-	**"/category/:categoryId"** navega a una categoría de productos, mediante el filtrado a partir del Id de categoría, utilizando el hook useParams.
+-	**"/item/:id"** navega al componente ItemDetailContainer, filtrando un produto por medio del Id autogenerado desde Firebase, mediante la utilización de useParams. El componente ItemDetailContainer devuelve e imprime en el DOM el componente ItemDetail, el cual contiene toda la información del producto. 
+-	**"/cart"** navega al componente Cart, mediante el cual se muestran en pantalla todos los productos que el usuario va agregando al carrito.
 
 Además de las rutas y el hook useParams, se utilizó el hook useHistory, dentro del componente ItemDetail, para acceder al historial de navegación y mediante el método .goBack() navegar a la pantalla anterior. Desde el DOM, se accede haciendo clic en un botón de flecha que se encuentra dentro del componente ItemDetail.
 
