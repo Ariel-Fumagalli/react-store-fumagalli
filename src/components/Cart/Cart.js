@@ -26,7 +26,7 @@ const Cart = () => {
         <>
         {cart.length === 0 &&
             <div className="cart-empty-container fade-in-cart">
-                <p>Todavía no agregastes ítems</p>
+                <p>Todavía no agregaste ítems</p>
                 <Link to='/' className="explorar">explorar productos</Link>
             </div>           
         }
